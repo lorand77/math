@@ -1,4 +1,4 @@
-N = 27
+import matplotlib.pyplot as plt
 
 def series_3x_plus_1(x):
     s = [x]
@@ -10,5 +10,12 @@ def series_3x_plus_1(x):
         s.append(x)
     return s
 
-for i in range(N):
-    print(series_3x_plus_1(i + 1))
+# N = 27
+# for i in range(N):
+#     print(series_3x_plus_1(i + 1))
+
+x = 27
+print(series_3x_plus_1(x))
+plt.plot(series_3x_plus_1(x))
+# plt.yscale("log")
+plt.show()
