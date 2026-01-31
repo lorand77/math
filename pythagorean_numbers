@@ -1,0 +1,37 @@
+import math
+
+# pythagorean_numbers = []
+# for a in range(1, 100):
+#     for b in range(1, 100):
+#         for c in range(1, 100):
+#             if a**2+b**2 == c**2:
+#                 if a < b:
+#                     pythagorean_numbers.append([a, b, c])
+
+# print(pythagorean_numbers)
+# print(len(pythagorean_numbers))
+
+
+# N = 100
+# pythagorean_numbers = []
+# for a in range(1, N):
+#     for b in range(a + 1, N):
+#         c = math.sqrt(a**2+b**2)
+#         if c == int(c) and c < N:
+#             pythagorean_numbers.append([a, b, int(c)])
+
+# print(pythagorean_numbers)
+# print(len(pythagorean_numbers))
+
+
+
+N = 1000
+pythagorean_numbers = []
+for a in range(1, N):
+    for b in range(a + 1, N):
+        c = math.sqrt(a**2+b**2)
+        if c == int(c) and c < N and math.gcd(a, b, int(c)) == 1:
+            pythagorean_numbers.append([a, b, int(c)])
+
+print(pythagorean_numbers)
+print(len(pythagorean_numbers))
